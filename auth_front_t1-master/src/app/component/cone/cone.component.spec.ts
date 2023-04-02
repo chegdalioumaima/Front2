@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VerifPageComponent } from './verif-page.component';
+import { ConeComponent } from './cone.component';
 
-describe('VerifPageComponent', () => {
-  let component: VerifPageComponent;
-  let fixture: ComponentFixture<VerifPageComponent>;
+describe('ConeComponent', () => {
+  let component: ConeComponent;
+  let fixture: ComponentFixture<ConeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VerifPageComponent ]
+      declarations: [ ConeComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(VerifPageComponent);
+    fixture = TestBed.createComponent(ConeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

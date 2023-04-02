@@ -1,21 +1,25 @@
 <div class="container">
   <div class="form">
-    <div class="title">Login</div>
-    <div class="input-container ic2">
-      <input id="lastname" class="input" type="text" placeholder=" " #username/>
-      <div class="cut"></div>
-      <label for="lastname" class="placeholder">email</label>
-    </div>
-    <div class="input-container ic2">
-      <input id="email" class="input" type="password" placeholder=" " #password/>
-      <div class="cut cut-short"></div>
-      <label for="email" class="placeholder">Password</label>
-    </div>
-    <button type="text" class="submit" (click)="login(username.value,password.value)">login</button>
+    <div class="sidee">
+                <img [src]="omni" alt="">
+                </div>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Bienvenue sur votre espace <br/>de gestion de contenu multimédia !</p>
+    
+      <label for="lastname" class="placeholder">E-mail</label>
+      <input id="lastname" class="box" type="text" placeholder=" " #username/>
+    
+      <label for="email" class="placeholder">Mot de passe</label>
+      <input id="email" class="box" type="password" placeholder=" " #password/>
+    
+      <input type="submit" class="submit" (click)="login(username.value,password.value)" value="je me connecte" id="submit">
     <div style=" margin-top: 20px ">
           <span class="errors" style="color: red ;">
             {{errors}}
           </span>
     </div>
+     <a href="#">Mot de passe oublié?</a>
   </div>
+   <div class="side">
+           <img [src]="myimage" alt="">
+        </div>
 </div>

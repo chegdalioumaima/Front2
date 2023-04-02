@@ -11,23 +11,12 @@ import {UserService} from '../../services/user-service.service';
 export class RegisterPageComponent implements OnInit {
 
   errors: string | null = null;
-  //myform!: FormGroup
+ 
+  myimage:string = "assets/images/image.png"
 
 
     
-  constructor(private UserService: UserService, private fb:FormBuilder) {
-    /*this.myform=this.fb.group({
-      firstName:['',Validators.required],
-      lastName:['',Validators.required],
-      email:['',Validators.required],
-      phone:['',Validators.required],
-      password:['',Validators.required],
-      confirmPassword:['',Validators.required],
-    })*/
-    
-    
-
-  }
+  constructor(private UserService: UserService, private fb:FormBuilder) {}
   
 
   

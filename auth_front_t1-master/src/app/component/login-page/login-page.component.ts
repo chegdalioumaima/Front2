@@ -9,6 +9,9 @@ import {UserService} from '../../services/user-service.service';
 })
 export class LoginPageComponent implements OnInit {
 
+  myimage:string = "assets/images/image.png"
+  omni:string = "assets/images/omni.png"
+
   errors: string | null = null;
 
   constructor(private UserService: UserService) {
