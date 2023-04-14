@@ -1,0 +1,304 @@
+<div class="layout-fluid theme-light">
+    <div class="page">
+  
+      <header class="navbar-expand-md">
+        <div class="collapse navbar-collapse" id="navbar-menu">
+          <div class="navbar navbar-light">
+            <div class="container-xl p-0">
+              <ul class="navbar-nav">
+                <li>
+                  <h1 class="navbar-brand navbar-brand-autodark p-0 border-end border-1">
+                    <a href=".">
+                      <img src="assets/static/logo.png" style="width: 250px;height:80px" alt="Tabler"
+                           class="navbar-brand-image">
+                    </a>
+                  </h1>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./">
+                  <span class="nav-link-title">
+                        Accueil
+                      </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./form-elements.html">
+  
+                  <span class="nav-link-title text-primary fw-bold">
+                        Candidats
+                      </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="./form-elements.html">
+                  <span class="nav-link-title">
+                        Appeles d'offres
+                      </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="./form-elements.html">
+                  <span class="nav-link-title">
+                        Matching
+                      </span>
+                  </a>
+                </li>
+              </ul>
+              <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
+                <div class="navbar-nav flex-row order-md-last me-3">
+                  <div class="nav-item dropdown">
+                    <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown"
+                       aria-label="Open user menu">
+                <span class="avatar avatar-sm avatar-rounded bg-primary text-white">
+                  P
+                </span>
+                      <div class="d-none d-xl-block ps-2">
+                        <div>Paweł Kuna</div>
+                      </div>
+                      <span class="fa fa-">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24"
+                         height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                         stroke-linecap="round" stroke-linejoin="round">
+                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                   <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                      <a href="#" class="dropdown-item">Status</a>
+                      <a href="./profile.html" class="dropdown-item">Profile</a>
+                      <a href="#" class="dropdown-item">Feedback</a>
+                      <div class="dropdown-divider"></div>
+                      <a href="./settings.html" class="dropdown-item">Settings</a>
+                      <a href="./sign-in.html" class="dropdown-item">Logout</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+  
+      <div class="page-wrapper h-100" style="background-color: #ebf1fd">
+  
+        <div class="page-header d-print-none px-4">
+          <div class="container-xl">
+            <div class="row g-2 align-items-center">
+              <div class="col">
+                <!-- Page pre-title -->
+                <h1 class="page-title">
+                  Ajouter un candidat
+                </h1>
+              </div>
+              <!-- Page title actions -->
+              <div class="col-auto ms-auto d-print-none">
+                <div class="btn-list">
+                    <span class="d-none d-sm-inline">
+                      <div role="button" class="btn px-3 py-2 btn-white text-primary border border-1 border-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" fill="currentColor" class="bi bi-x"
+                             viewBox="0 0 16 16">
+                          <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                        Annuler
+                      </div>
+                    </span>
+                  <div role="button" class="btn btn-primary px-3 py-2" data-bs-toggle="modal"
+                       data-bs-target="#modal-report">
+                    <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" fill="currentColor"
+                         class="bi bi-check-lg"
+                         viewBox="0 0 16 16">
+                      <path
+                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                    </svg>
+                    Enregistre
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Page header -->
+        <div class="page-body px-4 pb-4">
+  
+          <div class="container">
+            <div class="title">Infos de base</div>
+            <br><br>
+            <div class="gender-details">
+  
+  
+              <div class="category">
+                <span class="gender-title">Civilité</span>
+                <input type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label for="">
+                  <span class="dot one"></span>
+                  <span class="gender">Madame</span>&nbsp;&nbsp;
+                </label>
+                &nbsp;&nbsp;<input type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label for="">
+                  <span class="dot one"></span>
+                  <span class="gender">Monsieur</span>
+                </label>
+              </div>
+  
+              <div class="category1">
+                <span class="gender-title">État matrimonial</span>
+                <input type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label for="">
+                  <span class="dot one"></span>
+                  <span class="gender">Célibataire</span>&nbsp;&nbsp;
+                </label>
+                &nbsp;&nbsp;<input type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label for="">
+                  <span class="dot one"></span>
+                  <span class="gender">Marié</span>
+                </label>
+              </div>
+  
+            </div>
+  
+  
+            <form action="#">
+  
+              <div class="user-details">
+                <div class="input-box">
+                  <span class="details">Nom</span>
+                  <input type="text">
+                </div>
+                <div class="input-box">
+                  <span class="details">Prénom</span>
+                  <input type="text">
+                </div>
+                <div class="input-box">
+                  <span class="details">Adresse e-mail</span>
+                  <input type="text">
+                </div>
+                <div class="input-box">
+                  <span class="details">N° de téléphone</span>
+                  <input type="text">
+                </div>
+  
+  
+              </div>
+            </form>
+          </div>
+  
+          <div class="container1">
+            <div class="title">Infos professionnelles</div>
+            <br><br>
+  
+  
+            <form action="#">
+  
+              <div class="user-details">
+                <div class="input-box">
+                  <span class="details">Fonction actuelle</span>
+                  <input type="text">
+                </div>
+                <div class="input-box">
+                  <span class="details">Type contrat</span>
+                  <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="typecontrat" style="width: 768px;height: 38px;">
+                    
+                    <option *ngFor="let t of typecontrats|async" value="{{t.id}}">{{t.libelle}}</option>
+                </select>
+                </div>
+                <div class="input-box">
+                  <span class="details">Années d'expérience</span>
+                  <input type="text" value="AN(S)">
+                </div>
+                <div class="input-box">
+                  <span class="details">Niveau d'expertise</span>
+                  <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="niveaudexpertises" style="width: 768px;height: 38px;">
+                    
+                    <option *ngFor="let n of niveaudexpertises|async" value="{{n.id}}">{{n.libelle}}</option>
+                </select>
+                </div>
+                <div class="input-box">
+                  <span class="details">Compétences opérationnelle</span>
+                  <ng-multiselect-dropdown
+                    [settings]="dropdownSettings"
+                    [data]="data3">
+                  </ng-multiselect-dropdown>
+                </div>
+                <div class="input-box">
+                  <span class="details">Technologies</span>
+                  <ng-multiselect-dropdown
+                    [settings]="dropdownSettings"
+                    [data]="data4">
+                  </ng-multiselect-dropdown>
+                </div>
+                <div class="input-box">
+                  <span class="details">Compétences comportementales</span>
+                  <ng-multiselect-dropdown
+                    [settings]="dropdownSettings"
+                    [data]="data5">
+                  </ng-multiselect-dropdown>
+                </div>
+                <div class="input-box">
+                  <span class="details">Langues</span>
+                  <ng-multiselect-dropdown
+                    [settings]="dropdownSettings"
+                    [data]="data6">
+                  </ng-multiselect-dropdown>
+                </div>
+  
+                <div class="input-box">
+                  <span class="details">Salaire actuel</span>
+                  <input type="text" value="DH">
+                </div>
+                <div class="input-box">
+                  <span class="details">Salaire souhaité</span>
+                  <input type="text" value="DH">
+                </div>
+                <div class="input-box2">
+                  <span class="details">Date de recrutement</span>
+                  <input type="date">
+                </div>
+  
+                <div class="input-box">
+                  <span class="details">Infos supplémentaires</span>
+                  <ng-multiselect-dropdown
+                    [settings]="dropdownSettings"
+                    [data]="data7">
+                  </ng-multiselect-dropdown>
+                </div>
+  
+  
+              </div>
+            </form>
+          </div>
+  
+  
+          <div class="container1">
+            <div class="title">Formations</div>
+            <br><br>
+  
+  
+            <form action="#">
+  
+              <div class="user-details">
+                <div class="input-box">
+                  <span class="details">Titre du diplôme</span>
+                  <input type="text">
+                </div>
+  
+  
+                <div class="input-box">
+                  <span class="details">Niveau du diplôme</span>
+                  <input type="text">
+                </div>
+  
+  
+              </div>
+  
+            </form>
+  
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>

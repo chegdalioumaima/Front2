@@ -1,0 +1,12 @@
+.card-table thead tr:first-child td, .card-table thead tr:first-child th {
+  border-top: 0;
+  background-color: white;
+}
+
+
+.page-item.active-page .page-link {
+  z-index: 3;
+  color: #0f172a;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}

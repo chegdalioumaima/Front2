@@ -1,0 +1,65 @@
+.card-table thead tr:first-child td, .card-table thead tr:first-child th {
+    border-top: 0;
+    background-color: white;
+  }
+  
+  
+  .page-item.active-page .page-link {
+    z-index: 3;
+    color: #0f172a;
+    background-color: #ffffff;
+    border-color: #ffffff;
+  }
+
+  .page-title{
+   
+    font-size: 40px;
+    font-weight: 600;
+    color: #0b2866;
+    font-family: 'Inter';
+    font-style: normal;
+    margin-top: 20px;
+}
+.modal {
+    background: rgba(34, 59, 112, 0.8);
+}
+
+
+
+
+.container .title{
+   
+  font-size: 25px;
+  font-weight: 500;
+  color: #0b2866;
+
+}
+
+.container form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+form .user-details .input-box{
+  width: calc(100% / 2 - 20px);
+  margin: 10px 0 12px 0; // hauteur input
+
+}
+.user-details .input-box .details{
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+  color: #0b2866;
+}
+
+.user-details .input-box input{
+  height: 38px;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #8f9dae;
+  padding-left: 20px;
+  
+
+}
+
+

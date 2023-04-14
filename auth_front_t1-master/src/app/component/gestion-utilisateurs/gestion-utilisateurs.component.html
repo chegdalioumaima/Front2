@@ -1,0 +1,344 @@
+<div class="layout-fluid theme-light">
+  <div class="page">
+
+    
+      <div class="collapse navbar-collapse" id="navbar-menu">
+        <div class="navbar navbar-light">
+         
+            <ul class="navbar-nav">
+              <li>
+                <h1 class="navbar-brand navbar-brand-autodark p-0 border-end border-1">
+                  <a href=".">
+                    <img src="assets/static/logo.png" style="width: 250px;height:80px" alt="Tabler"
+                         class="navbar-brand-image">
+                  </a>
+                </h1>
+              </li>
+            </ul>
+            
+            
+        
+        </div>
+      </div>
+    
+
+    <div class="page-wrapper h-100" style="background-color: #ebf1fd">
+      <!-- Page header -->
+      <div class="container-fluid p-0 h-100" style="min-height: 100vh!important;">
+        <div class="d-flex align-items-stretch h-100" style="min-height: 100vh!important;height: 100%">
+
+          <div *ngIf="!isFilterVisible" style="width: 35px" class="position-relative">
+
+            <!-- open tab -->
+            <span role="button" (click)="isFilterVisible=!isFilterVisible"
+                  class="position-absolute end-0 mt-2 bg-white rounded rounded-circle p-1  border border-1"
+                  style="margin-right:-15px">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="24"
+                   height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                   stroke-linecap="round" stroke-linejoin="round">
+                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                 <path d="M9 6l6 6l-6 6"></path>
+              </svg>
+            </span>
+          </div>
+
+          <div *ngIf="isFilterVisible" style="width: 250px;" class="bg-white position-relative">
+
+            <!-- open tab -->
+            <span role="button" (click)="isFilterVisible=!isFilterVisible"
+                  class="position-absolute end-0 mt-2 bg-white rounded rounded-circle p-1 border border-1"
+                  style="margin-right:-15px">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24"
+                   height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M15 6l-6 6l6 6"></path>
+              </svg>
+            </span>
+
+            <div class="overflow-auto">
+              <img src="assets/static/logo.png" style="width: 250px;height:80px" alt="Tabler"
+              class="navbar-brand-image">
+            </div>
+
+          </div>
+
+          <!-- content -->
+
+          <div class="col">
+            <div class="page-header d-print-none">
+              <div class="container-xl">
+                <div class="row g-2 align-items-center mt-3">
+                  <div class="col">
+                      <h1 class="page-title">
+                          Gestion des utilisateurs
+                        </h1>
+                        
+                  </div>
+                  <!-- Page title actions -->
+                  <div class="col-auto ms-auto d-print-none">
+                    <div class="btn-list">
+                      <button type="button" class="btn btn-primary" (click)="openModal2()"><svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                     <path d="M12 5l0 14"></path>
+                     <path d="M5 12l14 0"></path>
+                   </svg>
+                        Ajouter un nouvel utilisateur</button>
+                    <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':display2}" >
+                    <div class="modal-dialog" role="document">
+                   <div class="modal-content">
+                      <div class="modal-header">
+                      <h1 class="modal-title">Ajouter un nouvel utilisateur</h1>
+                      <button type="button" class="close" aria-label="Close" (click)="onCloseHandled2()"><span aria-hidden="true" >&times;</span></button>
+                      </div>
+                      <div class="container">
+                        <form action="#">
+                          <div class="user-details">
+                      <div class="modal-body"> 
+                        <input id="email" class="box" type="text" placeholder=" " #id  hidden/>                    
+                          <div class="input-box">
+                              <span class="details">Nom</span>
+                              <input type="text" placeholder="Saisissez un nom" #lastName/>
+                            </div>
+                     
+                 
+                          <div class="input-box">
+                              <span class="details">Prénom</span>
+                              <input type="text"  placeholder="Saisissez un prénom" #firstName/>
+                            </div>
+                            <div class="input-box">
+                              <span class="details">Fonction</span>
+                              <input type="text"  placeholder="Saisissez une fonction" #fonction/>
+                            </div>
+                            <div class="input-box">
+                              <span class="details">E-mail</span>
+                              <input type="text" placeholder="Saisissez un e-mail" #email/>
+                            </div>
+                            <div class="input-box">
+                              <span class="details">Rôle</span>
+                              <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="role" #role_id>
+                  
+                              <option *ngFor="let r of roles|async" value="{{r.id}}">{{r.nomRole}}</option>
+
+                            </select>
+                            
+                          
+                           
+                            </div>
+                            <div class="input-box">
+                              <span class="details">Mot de passe</span>
+                              <input type="password" #password/>
+                            </div>
+                            <div class="input-box">
+                              <span class="details">Confirmer le mot de passe</span>
+                              <input type="password" #confirmPassword/>
+                            </div>
+
+                            <div class="input-box">
+                              <span class="details">Statut</span>
+                              <mat-slide-toggle [(ngModel)]="isChecked" [ngModelOptions]="{standalone: true}" ></mat-slide-toggle>
+                              <div>{{isChecked}}</div>
+                            </div>
+                           
+                            <input id="resetPaaswordToken"  type="text" placeholder=" " #resetPaaswordToken  hidden/>  
+
+                          
+                          </div>
+                      </div>
+                  </form>
+                  </div>
+
+                      <div class="modal-footer">
+                      <button type="button" class="btn btn-outline-primary" (click)="onCloseHandled2()">Annuler</button>
+                      <button type="button" class="btn btn-primary" (click)="register(
+                        
+                        firstName.value,
+                        lastName.value,
+                        email.value,
+                        fonction.value,
+                        +role_id.value,
+                        password.value,
+                        confirmPassword.value,
+                        isChecked
+                        )">Enregistrer</button> 
+                           
+                      
+                      </div>
+                                      
+                      </div>
+                  </div>
+          </div>
+                      
+
+
+
+
+
+
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="page-body px-4 ">
+              <div class="col row g-2 align-items-center mt-3 mb-3 position-relative">
+
+               
+
+                <!-- Page title actions -->
+                <div class="col-auto ms-auto d-print-none">
+                  <div class="btn-list">
+
+                    <div role="button" class="btn  btn-white text-dark fw-bold text-center pe-0 px-3 ">
+                      <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rotate" width="24"
+                           height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                           stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M19.95 11a8 8 0 1 0 -.5 4m.5 5v-5h-5"></path>
+                      </svg>
+                    </div>
+
+
+                  </div>
+                </div>
+
+                <!-- Page filter -->
+                <div *ngIf="isFiltersTabsVisible" class="card position-absolute end-0 px-0"
+                     style="z-index: 1000000;width: 350px;margin-top: 420px">
+                  
+                </div>
+
+              </div>
+              <div class="col-12">
+                <div class="card">
+                  <div class="table-responsive " style="min-height: 60vh">
+                    <table class="table card-table table-vcenter text-nowrap datatable ">
+                      <thead class="bg-white rounded rounded-3">
+                      <tr>
+                        <th class="w-1"><input class="form-check-input m-0 align-middle" type="checkbox"
+                                               aria-label="Select all invoices"></th>
+                        <th>NOM & Prénom</th>
+                        <th>FONCTION</th>
+                        <th>E-MAIL</th>
+                        <th>ROLE</th>
+                        <th>STATUT</th>
+                       
+                      
+                      </tr>
+                      </thead>
+                      <tbody>
+
+                      <tr *ngFor="let user of users|async">
+                        <td>
+                          <input class="form-check-input m-0 align-middle" type="checkbox"
+                                 aria-label="Select invoice">
+                        </td>
+                        <td>
+                          <span class="text-reset" tabindex="-1">{{user.firstName}}{{user.lastName}}</span>
+                        </td>
+                        <td>
+                          <span class="text-reset">
+                            {{user.fonction}}
+                          </span>
+                        </td>
+                        <td>
+                          <span class="text-reset">
+                            {{user.email}}
+                          </span>
+                        </td>
+                        <td>
+                          <span class="text-reset">
+                            {{user.role.nomRole}}
+                          </span>
+                        </td>
+                        <td>
+                          <span class="text-reset">
+                            {{user.statut}}
+                          </span>
+                        </td>
+                        
+
+                      </tr>
+
+
+                      </tbody>
+                    </table> 
+                  </div>
+
+                </div>
+
+                <div class="card bg-transparent shadow-none mt-3 border-0">
+                  <div class="card-footer row align-items-center border-0 shadow-none bg-transparent">
+                    <div class="col-sm-6">
+                      <ul class="pagination m-0">
+                        <li (click)="onClickPreviousPage()"
+                            class="page-item" [classList]="currentPage == 1 ? 'page-item disabled' : 'page-item'">
+                          <a role="button" class="page-link">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/chevron-right -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left"
+                                 width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                 fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M15 6l-6 6l6 6"></path>
+                            </svg>
+                          </a>
+                        </li>
+
+                        <li *ngFor="let i of getShowedPages()" class="page-item"
+                            (click)="currentPage= i"
+                            [classList]="  i==currentPage ? 'page-item active-page' : 'page-item'  ">
+                          <a role="button" class="page-link">{{ i }}</a>
+                        </li>
+                        <li *ngIf="getShowedPages()[getShowedPages().length-1] != totalOfPages" class="page-item">
+                          <a role="button" class="page-link">...</a>
+                        </li>
+                        <li class="page-item"
+                            *ngIf="getShowedPages()[getShowedPages().length-1] != totalOfPages"
+                            (click)="currentPage= totalOfPages"
+                            [classList]="  totalOfPages==currentPage ? 'page-item active-page' : 'page-item'  ">
+                          <a role="button" class="page-link">{{ totalOfPages }}</a>
+                        </li>
+
+                        <li class="page-item"
+                            (click)="onClickNextPage()"
+                            [classList]="currentPage == totalOfPages ? 'page-item disabled' : 'page-item'">
+                          <a role="button" class="page-link">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/chevron-right -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M9 6l6 6l-6 6"></path>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                      <div class="dataTables_length bs-select text-end " id="dtBasicExample_length">
+                        <label class="text-end d-inline-flex">Showing
+                          <select [(ngModel)]="perPage" class="form-select form-select-sm mx-2 w-auto">
+                            <option *ngFor="let i of perPageOptions" [ngValue]="i">{{i}}</option>
+                          </select> of {{data.length}} items</label></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- end content -->
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

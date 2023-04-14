@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { Users } from 'src/app/model/Users';
 import {UserService} from '../../services/user-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -14,7 +15,7 @@ export class LoginPageComponent implements OnInit {
 
   errors: string | null = null;
 
-  constructor(private UserService: UserService) {
+  constructor(private UserService: UserService,private router:Router) {
   }
 
   ngOnInit(): void {
@@ -25,7 +26,7 @@ export class LoginPageComponent implements OnInit {
     this.UserService.login({...Users,email, password}).subscribe((response: any) => {
       console.log(response);
       if (response.status) {
-        alert("logged succefully")
+        this.router.navigate(['/candidat']);
       } else {
         this.errors = response.error;
       }

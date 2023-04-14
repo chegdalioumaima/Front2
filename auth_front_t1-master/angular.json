@@ -28,9 +28,21 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/dist/css/tabler.min.css",
+              "src/assets/dist/css/tabler-flags.min.css",
+              "src/assets/dist/css/tabler-payments.min.css",
+              "src/assets/dist/css/tabler-vendors.min.css",
+              "src/assets/dist/css/demo.min.css",
+              "src/styles.scss",
+              "@angular/material/prebuilt-themes/purple-green.css"
             ],
-            "scripts": []
+
+           
+            "scripts": [
+              "src/assets/dist/libs/apexcharts/dist/apexcharts.min.js",
+              "src/assets/dist/js/tabler.min.js",
+              "src/assets/dist/js/demo.min.js"
+            ]
           },
           "configurations": {
             "production": {

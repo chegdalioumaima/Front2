@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Users } from 'src/app/model/Users';
 import {UserService} from '../../services/user-service.service';
+import { Role } from 'src/app/model/Role';
 
 @Component({
   selector: 'app-register-page',
@@ -26,7 +27,7 @@ export class RegisterPageComponent implements OnInit {
 
 
 
-  register(id:number,firstName: string, lastName: string, email: string, phone: string, password: string, confirmPassword: string){
+ /* register(id:number,firstName: string, lastName: string, email: string, phone: string, password: string, confirmPassword: string){
     this.UserService.register(new Users(id,firstName, lastName, email, phone, password,confirmPassword)).subscribe((response: any) => {
       console.log(response);
       if (response.status) {
@@ -35,7 +36,8 @@ export class RegisterPageComponent implements OnInit {
         this.errors = response.message;
       }
     });
-  }
+  }*/
+  
 
 }
 
