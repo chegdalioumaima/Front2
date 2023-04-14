@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
 })
 export class LoginPageComponent implements OnInit {
 
-  myimage:string = "assets/images/image.png"
-  omni:string = "assets/images/omni.png"
+  myimage:string = "assets/images/loginimage.png"
+  omni:string = "assets/images/loginlogo1.png"
 
   errors: string | null = null;
 

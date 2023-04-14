@@ -5,13 +5,10 @@ import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {LoginPageComponent} from './component/login-page/login-page.component';
-import {RegisterPageComponent} from './component/register-page/register-page.component';
 import { ComponentComponent } from './component/component.component';
 import { ModelComponent } from './model/model.component';
-import { ConeComponent } from './component/cone/cone.component';
 import { CandidatComponent } from './component/candidat/candidat.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
-import { HomeComponent } from './component/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { GestionUtilisateursComponent } from './component/gestion-utilisateurs/gestion-utilisateurs.component';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
@@ -24,12 +21,9 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
   declarations: [
     AppComponent,
     LoginPageComponent,
-    RegisterPageComponent,
     ComponentComponent,
     ModelComponent,
-    ConeComponent,
     CandidatComponent,
-    HomeComponent,
     GestionUtilisateursComponent,
     ForgotPasswordComponent,
     ResetPasswordComponent,

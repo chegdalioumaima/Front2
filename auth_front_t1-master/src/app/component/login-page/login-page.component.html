@@ -3,12 +3,13 @@
     <div class="sidee">
                 <img [src]="omni" alt="">
                 </div>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;Bienvenue sur votre espace <br/>de gestion de contenu multimédia !</p>
+            <p>&nbsp;&nbsp;&nbsp;Bienvenue sur votre espace<br>
+              de gestion de candidatures et de<br>&nbsp;&nbsp;&nbsp; correspondance d'offres.</p>
     
       <label for="lastname" class="placeholder">E-mail</label>
       <input id="lastname" class="box" type="text" placeholder=" " #username/>
     
-      <label for="email" class="placeholder">Mot de passe</label>
+      <label type="label1" for="email" class="placeholder">Mot de passe</label>
       <input id="email" class="box" type="password" placeholder=" " #password/>
     
       <input type="submit" class="submit" (click)="login(username.value,password.value)" value="je me connecte" id="submit">

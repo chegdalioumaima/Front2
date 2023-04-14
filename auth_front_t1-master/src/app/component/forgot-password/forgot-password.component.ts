@@ -11,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 export class ForgotPasswordComponent {
 
   myimage:string = "assets/images/forgot.png"
-  omni:string = "assets/images/omni.png"
+  omni:string = "assets/images/loginlogo1.png"
   errors!: string;
   showPopup = false;
 
